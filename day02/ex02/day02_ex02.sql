@@ -21,4 +21,6 @@ FROM person p
      ) AS pv
      ON p.id = pv.person_id
     FULL JOIN pizzeria piz ON pv.pizzeria_id = piz.id
-ORDER BY person_name, visit_date, pizzeria_name;
+ORDER BY person_name,
+         visit_date,
+         pizzeria_name;
