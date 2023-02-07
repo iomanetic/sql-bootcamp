@@ -7,7 +7,6 @@ SELECT person.id,
        piz.name,
        piz.rating
 FROM person
-    JOIN pizzeria piz
-    ON piz.id = person.id
+    CROSS JOIN pizzeria piz
 ORDER BY person.id,
          piz.id;

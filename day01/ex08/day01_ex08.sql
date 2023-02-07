@@ -6,4 +6,5 @@ FROM person_order po
                     SELECT id AS person_id, name, age
                     FROM person
                  ) AS p
-ORDER BY po.order_date, person_information;
+ORDER BY po.order_date,
+         person_information;
