@@ -3,16 +3,16 @@ WITH
     (
         SELECT piz.name AS pizzeria_name
         FROM person p
-            JOIN person_visits pv on p.id = pv.person_id
-            JOIN pizzeria piz on pv.pizzeria_id = piz.id
+            JOIN person_visits pv ON p.id = pv.person_id
+            JOIN pizzeria piz ON pv.pizzeria_id = piz.id
         WHERE p.gender = 'female'
     ),
     male_pizzerias AS
     (
         SELECT piz.name AS pizzeria_name
-        FROM person p
-            JOIN person_visits pv on p.id = pv.person_id
-            JOIN pizzeria piz on pv.pizzeria_id = piz.id
+        FROM person AS p
+            JOIN person_visits pv ON p.id = pv.person_id
+            JOIN pizzeria piz ON pv.pizzeria_id = piz.id
         WHERE p.gender = 'male'
     )
 (SELECT female_pizzerias.pizzeria_name
