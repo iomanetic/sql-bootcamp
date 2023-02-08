@@ -1,6 +1,6 @@
-SELECT *
+SELECT name
 FROM v_persons_female
 UNION
-(SELECT *
+(SELECT name
  FROM v_persons_male)
 ORDER BY name;
