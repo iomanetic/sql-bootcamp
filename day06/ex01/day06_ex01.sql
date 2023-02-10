@@ -9,6 +9,6 @@ SELECT row_number() over () AS id,
            THEN 22
            ELSE 30
        END AS discount
-FROM person_order
-    JOIN menu m on person_order.menu_id = m.id
+FROM person_order AS po
+    JOIN menu AS m ON po.menu_id = m.id
 GROUP BY person_id, pizzeria_id;
