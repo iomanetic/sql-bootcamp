@@ -7,3 +7,6 @@ CREATE MATERIALIZED VIEW mv_dmitriy_visits_and_eats AS
     WHERE p.name IN ('Dmitriy')
         AND m.price < 800
         AND pv.visit_date = to_date('2022-01-08', 'YYYY-MM-DD');
+
+
+
