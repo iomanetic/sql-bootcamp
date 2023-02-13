@@ -3,7 +3,6 @@ WHERE order_date = '2022-01-01';
 SET enable_seqscan = off;
 EXPLAIN ANALYSE
 SELECT person_id,
-       menu_id,
-       order_date
+       menu_id
 FROM person_order
-WHERE order_date = to_date('2022-01-01', 'YYYY-MM-DD');
+WHERE order_date = '2022-01-01';

@@ -3,4 +3,4 @@ SET enable_seqscan = off;
 EXPLAIN ANALYSE
 SELECT name
 FROM person
-WHERE UPPER(name) = 'ANNA'
+WHERE UPPER(name) = 'ANNA';
