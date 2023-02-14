@@ -1,3 +1,4 @@
+COMMENT ON TABLE person_discounts IS 'the table of person''s discounts for customers';
 COMMENT ON COLUMN person_discounts.id IS 'unique column id';
 COMMENT ON COLUMN person_discounts.person_id IS 'id of the person who has the discount';
 COMMENT ON COLUMN person_discounts.pizzeria_id IS 'id of pizzeria when person has discount';
