@@ -1,14 +1,8 @@
 -- Session 1
-show transaction isolation level;
+begin transaction isolation level repeatable read;
 
 -- Session 2
-show transaction isolation level;
-
--- Session 1
-begin;
-
--- Session 2
-begin;
+begin transaction isolation level repeatable read;
 
 -- Session 1
 select * from pizzeria where name='Pizza Hut';
