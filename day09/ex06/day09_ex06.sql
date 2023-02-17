@@ -9,7 +9,7 @@ LANGUAGE plpgsql
 AS
 $$
     BEGIN
-        RETURN QUERY (SELECT piz.name AS pizzeria_name
+        RETURN QUERY (SELECT DISTINCT piz.name AS pizzeria_name
         FROM person AS p
             JOIN person_visits pv on p.id = pv.person_id
             JOIN person_order po on p.id = po.person_id AND po.order_date = pv.visit_date
@@ -22,7 +22,7 @@ $$
 $$;
 
 select *
-from fnc_person_visits_and_eats_on_date2(pprice := 800);
+from fnc_person_visits_and_eats_on_date(pprice := 800);
 
 select *
 from fnc_person_visits_and_eats_on_date(pperson := 'Anna',pprice := 1300,pdate := '2022-01-01');

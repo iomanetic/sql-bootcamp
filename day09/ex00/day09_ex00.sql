@@ -1,4 +1,3 @@
-
 CREATE TABLE person_audit
 (
     created TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL,
