@@ -9,7 +9,7 @@ LANGUAGE plpgsql
 AS
 $$
     BEGIN
-        RETURN QUERY (SELECT DISTINCT piz.name AS pizzeria_name
+        RETURN QUERY (SELECT piz.name AS pizzeria_name
         FROM person AS p
             JOIN person_visits pv on p.id = pv.person_id
             JOIN person_order po on p.id = po.person_id AND po.order_date = pv.visit_date
